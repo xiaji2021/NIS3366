@@ -1,0 +1,45 @@
+body{
+    background-color: #f1f2f5;
+}
+.navcontainer{
+    background-color: #fff;
+    width: 660px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.navbox{
+    list-style: none;
+    width: 700px;
+    height: 30px;
+    border-radius: 4px;
+}
+.navbox li{
+    float: left;
+    margin-left: 5px;
+    line-height: 30px;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+}
+.navbox li:hover{
+    background-color:#fff2e5;
+    border-radius: 20px;
+    color: #ff8c14;
+}
+.active{
+    color: #ff8c14;
+}
+#moren{
+    color: #ff8c14;
+}
+img{
+    width: 20px; 
+    height: 20px;
+    margin-top: 7px;
+    margin-left: 20px;
+    cursor: pointer;
+}
