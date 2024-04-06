@@ -1,33 +1,30 @@
 import React, { useState } from 'react';
 import './ImageGenerator.css'
 import image0 from './1.png'
+import axios from 'axios';
 function App() {
-  const [text, setText] = useState('');//输入文本
-  const [style, setStyle] = useState('default');//风格选择
-  const [seed, setSeed] = useState('');//输入种子
-  const [generatedImage, setGeneratedImage] = useState(null);//存储生成图片
-  const [imageCount, setImageCount] = useState(1); // 新增图片数量
-  const [imageSize, setImageSize] = useState('medium'); // 新增图片尺寸
-  const handleGenerateClick = () => {
-    // 在此处处理生成图片的逻辑，可以根据用户来生成对应的图片生成的图片可以存储在generatedImage状态中，并在界面中显示出来
-  };
-  /*const ImageGrid = () => {
-    const [images, setImages] = useState([]);
-    useEffect(() => {
-      // 在这里发送请求获取图片数据，并更新图片状态
-      // 假设后端接口返回一个包含图片 URL 的数组
-      fetchImageData()
-        .then(data => setImages(data))
-        .catch(error => console.error('Error fetching images:', error));
-    }, []);
-    const fetchImageData = async () => {
-      // 使用实际的后端接口 URL 发送请求
-      const response = await fetch('your_backend_endpoint');
-      const data = await response.json();
-      return data;
-    };
-  }
-  */
+    const [text, setText] = useState('');//输入文本
+    const [style, setStyle] = useState('default');//风格选择
+    const [seed, setSeed] = useState('');//输入种子
+    const [generatedImage, setGeneratedImage] = useState(null);//存储生成图片
+    const [imageCount, setImageCount] = useState(1); // 新增图片数量
+    const [imageSize, setImageSize] = useState('medium'); // 新增图片尺寸
+    const [imageUrl, setImageUrl] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleGenerateClick = async () => {
+        try {
+            setIsLoading(true);
+            const response = await axios.post('http://<ip>:<port>/generate-image', {text});
+            setImageUrl(response.data.image_path); //后端需要返回image_path
+            setIsLoading(false);
+        }
+        catch (error)  {
+            console.error('Error generating image:', error);
+            setIsLoading(false);
+        }
+        };
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center', height: '100vh' }}>
       <div style={{
