@@ -9,15 +9,24 @@
 .title{
     font-size: 35px;
     text-align: center;
-    color:rgb(190, 47, 190);
+    color:rgb(243, 129, 205);
     font-family:'font1';
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 0px;
 }
-.line{
+.line1{
+    color:rgb(30, 66, 99);
     font-size: 30px;
     text-align:left;
-    color:rgb(0, 0, 0);
+    font-family: 'font2';
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: inline;
+}
+.line2{
+    font-size: 30px;
+    text-align:left;
+    color:rgb(30, 66, 99);
     font-family: 'font2';
     margin-top: 10px;
     margin-bottom: 10px;
@@ -26,14 +35,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
+    margin-top: 5px;
+
 }
 .grid-item img {
-    width: 100px;
-    height:70px;
+    width: 80%;
+    height: 70%;
 }
 .style{
     text-align: center;
-    font-size:15px;
+    font-size:10px;
     margin: 0px;
 }
 .style1{
