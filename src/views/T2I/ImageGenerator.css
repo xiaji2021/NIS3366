@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'font1';
+    src: url('font1.ttf');
+}
+@font-face {
+    font-family: 'font2';
+    src: url('font2.ttf');
+}
+.title{
+    font-size: 35px;
+    text-align: center;
+    color:rgb(190, 47, 190);
+    font-family:'font1';
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.line{
+    font-size: 30px;
+    text-align:left;
+    color:rgb(0, 0, 0);
+    font-family: 'font2';
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+.grid-item img {
+    width: 100px;
+    height:70px;
+}
+.style{
+    text-align: center;
+    font-size:15px;
+    margin: 0px;
+}
+.style1{
+    font-size: 20px;
+    display: inline;
+}
+.inline{
+    display: inline;
+}
