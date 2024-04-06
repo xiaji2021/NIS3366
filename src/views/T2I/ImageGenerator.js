@@ -34,6 +34,7 @@ function App() {
         display:'flex',
         width: '100%',
         height: 'auto',
+        marginTop:'0px',
         justifyContent: 'space-between',
         padding:'2%',
         background: 'linear-gradient(to bottom left, rgb(255, 238, 255), rgb(221, 255, 238))'
@@ -166,7 +167,7 @@ function App() {
             生成图片
           </button>
         </div>
-        <div style={{ flex: 1, border: '1px solid #ccc', padding: '20px' }}>
+        <div style={{ flex: 1, border: '1px solid #ccc', padding: '00px' }}>
           {generatedImage && <img src={generatedImage} alt="Generated" style={{ maxWidth: '100%', maxHeight: '400px' }} />}
           <div>
             <h1 style={{ textAlign: 'center' }}>左侧输入内容，开启绘图之旅</h1>
@@ -177,7 +178,7 @@ function App() {
               </div> */}
           </div>
         </div>
-      </div>n
+      </div>
     </div>
   );
 }
