@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ImageGenerator.css'
 import image0 from './1.png'
 import axios from 'axios';
-function App() {
+function ImageGenerator() {
     const [text, setText] = useState('');//输入文本
     // const [style, setStyle] = useState('default');//风格选择
     const [seed, setSeed] = useState('');//输入种子
@@ -35,7 +35,7 @@ function App() {
             console.error('Error generating image:', error);
             setIsLoading(false);
         }
-        };
+    };
 
 
 
@@ -250,4 +250,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default ImageGenerator;
