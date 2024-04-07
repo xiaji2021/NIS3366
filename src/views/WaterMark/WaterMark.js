@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './WaterMark.css';
-const ImageUploader = () => {
+const WaterMark = () => {
+
   // State for the uploaded image
   const [image, setImage] = useState(null);
   // Function to handle file upload
@@ -62,4 +63,4 @@ const ImageUploader = () => {
   );
 };
 
-export default ImageUploader;
+export default WaterMark;

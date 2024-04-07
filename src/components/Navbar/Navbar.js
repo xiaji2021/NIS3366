@@ -17,17 +17,13 @@ function Navbar() {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/about" activeClassName="active" className="nav-links">
-                            水印检测
+                        <NavLink to="/watermark" activeClassName="active" className="nav-links">
+                            水印检测与生成
                         </NavLink>
                     </li>
+
                     <li className="nav-item">
-                        <NavLink to="/services" activeClassName="active" className="nav-links">
-                            水印生成
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to="/contact" activeClassName="active" className="nav-links">
+                        <NavLink to="/entity" activeClassName="active" className="nav-links">
                             实体抽取
                         </NavLink>
                     </li>
