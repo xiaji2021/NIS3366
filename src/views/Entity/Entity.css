@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
 .image {
@@ -72,3 +72,17 @@
 .generate-button:hover {
     background-color: #0056b3;
 }
+
+.custom-file-upload1 {
+    margin-top: 10px;
+    font-family: 'font2';
+    font-size: 20px;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, rgb(245, 216, 255), rgb(180, 226, 255));
+    border: 2px solid #000000;
+    margin-bottom: 30px;
+  }

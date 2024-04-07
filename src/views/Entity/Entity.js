@@ -86,9 +86,14 @@ const Entity = () => {
                     {image ? (
                         <img src={image} alt="Uploaded" className="image"/>
                     ) : (
-                        <p className="upload-text">将图片拖拽放入此处&点击此处选择图片文件</p>
+                        <p className="upload-text">将图片拖拽放入此处&点击下方选择图片文件</p>
                     )}
                 </div>
+                <form className="form" onSubmit={handleSubmit}></form>
+                <label className="custom-file-upload1">
+                    点击此处上传图片
+                    <input type="file" onChange={handleImageUpload} accept="image/*" />
+                </label> 
                 <form className="form" onSubmit={handleSubmit}>
                     <input type="file" onChange={handleImageUpload} accept="image/*"/>
                     <button type="submit" className="generate-button">实体抽取</button>
