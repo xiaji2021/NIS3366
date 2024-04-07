@@ -157,7 +157,8 @@ input[type="file"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  margin-left: 80px;
 }
 
 .dropped-image {
@@ -167,7 +168,8 @@ input[type="file"] {
 }
 
 .method-buttons {
-  margin: 20px auto;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .method-buttons button {

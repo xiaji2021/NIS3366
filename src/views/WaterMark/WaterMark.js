@@ -131,16 +131,19 @@ const ImageUploader = () => {
           </div>
           <div className="method-buttons">
             <button onClick={() => handleMethodChange1('Method 1')} className='attack'>
-              方式1
+              缩放攻击
             </button>
             <button onClick={() => handleMethodChange1('Method 2')} className='attack'>
-              方式2
+              亮度调整攻击
             </button>
             <button onClick={() => handleMethodChange1('Method 3')} className='attack'>
-              方式3
+              遮挡攻击
             </button>
             <button onClick={() => handleMethodChange1('Method 4')} className='attack'>
-              方式4
+              椒盐攻击
+            </button>
+            <button onClick={() => handleMethodChange1('Method 4')} className='attack'>
+              旋转攻击
             </button>
           </div>
           <div className="selected-method">{selectedAttack}</div> {/* 显示选择的攻击方式 */}

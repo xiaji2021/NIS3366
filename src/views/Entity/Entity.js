@@ -79,7 +79,7 @@ const Entity = () => {
         <div className='container'>
             <div className='left'>
                 <h1 className="title3">实体抽取/Entity Extraction</h1>
-                <div className="image-container"
+                <div className="image-container1"
                     onDrop={handleDrop}
                     onDragOver={(e) => e.preventDefault()}
                 >
@@ -91,7 +91,7 @@ const Entity = () => {
                 </div>
                 <form className="form" onSubmit={handleSubmit}>
                     <input type="file" onChange={handleImageUpload} accept="image/*"/>
-                    <button type="submit" className="generate-button">运行</button>
+                    <button type="submit" className="generate-button">实体抽取</button>
                 </form>
             </div>
 
