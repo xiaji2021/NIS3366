@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import './WaterMark.css';
 const ImageUploader = () => {
@@ -76,13 +76,6 @@ const ImageUploader = () => {
   const handleDragOver1 = (e) => {
     e.preventDefault();
   };
-
-
-
-
-
-
-
 
 
 

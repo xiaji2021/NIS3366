@@ -50,7 +50,7 @@ const Entity = () => {
         formData.append('image', dataURLtoBlob(image));
         formData.append('text', text);
         try {
-            const response =  await axios.post('/watermark-gen',formData,{
+            const response =  await axios.post('/entity-gen',formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

@@ -66,9 +66,10 @@ def generate_image():
 
     # image = model.generate_image(prompt).images[0]
     # 使用 secure_filename 清洁文件名
-    unique_filename = f"generated_image_{uuid4().hex}.png"
-    output_filepath = os.path.join(app.static_folder, 'txt2images', secure_filename(unique_filename))
-    if os.path.exists
+    unique_filename = secure_filename(f"generated_image_{uuid4().hex}.png")
+    output_filepath = os.path.join(app.static_folder, 'txt2images', unique_filename)
+    if not os.path.exists(os.path.join(app.static_folder, 'txt2images')):
+        os.mkdirs(os.path.join(app.static_folder, 'txt2images'))
 
     model.generate_image(prompt,output_filepath,height, width, step, scale, seed)
     # # 保存图片到静态文件夹
@@ -88,7 +89,44 @@ def images(filename):
 
 // app.static_folder可能需要进行区分
 
-@app.route('/watermark-gen', methods=['POST'])
+@app.route('/entity-gen', methods=['POST'])
+def entity():
+    model = QWEN_VL()
+
+    dic_path = os.path.join(app.static_folder, 'entity_origin')
+    if not os.path.exists(dic_path):
+        os.mkdirs(dic_path)
+    if 'image' not in request.files:
+        return jsonify({'error': 'No image part'}), 400
+    file = request.files['image']
+    text = request.form.get('text')
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+    if file:
+        filename = secure_filename(f"entity_origin_{uuid4().hex}.png")
+        file_path = os.path.join(dic_path,filename)
+        file.save(file_path)
+    else:
+        return jsonify({'error': 'No such file'}), 400
+
+    output_filepath = os.path.join(app.static_folder, 'entity_gen')
+    if not os.exists(output_filepath):
+        os.mkdirs(output_filepath)
+    model.extract_entity(file_path,output_filepath)
+    image_url = request.host_url + 'entity-gen/' + unique_filename
+
+
+
+@app.route('/entity-gen/<filename>')
+def entityGen(filename):
+    return send_from_directory(os.path.join(app.static_folder,entity_gen), filename)
+
+
+
+
+
+
+
 
 
 
