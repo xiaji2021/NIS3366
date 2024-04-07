@@ -4,7 +4,6 @@ import axios from "axios";
 
 const Entity = () => {
     // 用于保存上传图片的状态
-    const [text, setText] = useState('');
     const [image, setImage] = useState(null);
     const [watermarkImage, setWatermarkImage] = useState(null);
     //这里得到的是一个链接
@@ -42,20 +41,21 @@ const Entity = () => {
     // 处理表单提交的函数
     const handleSubmit = async (e)=> {
         e.preventDefault();
-        if (!image || !text) {
-            alert('Please upload an image and enter watermark text.');
+        if (!image) {
+            alert('Please upload an image.');
             return;
         }
         const formData = new FormData();
         formData.append('image', dataURLtoBlob(image));
-        formData.append('text', text);
+
         try {
-            const response =  await axios.post('/entity-gen',formData,{
+            const response =  await axios.post('http://47.103.101.128:8888/entity-gen',formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             })
             setWatermarkImage(response.data.image_path);
+            console.log('test')
         } catch (error) {
             console.error(error);
         }
