@@ -4,19 +4,31 @@ import image0 from './1.png'
 import axios from 'axios';
 function App() {
     const [text, setText] = useState('');//输入文本
-    const [style, setStyle] = useState('default');//风格选择
+    // const [style, setStyle] = useState('default');//风格选择
     const [seed, setSeed] = useState('');//输入种子
+    const [height,setHeight] =useState('512');
+    const [width,setWidth] =useState('512');
+    const [step,setStep] = useState('25');
+    const [scale,setScale] = useState('25');
+
     const [generatedImage, setGeneratedImage] = useState(null);//存储生成图片
     const [imageCount, setImageCount] = useState(1); // 新增图片数量
     const [imageSize, setImageSize] = useState('medium'); // 新增图片尺寸
-    const [imageUrl, setImageUrl] = useState('');
+    // const [imageUrl, setImageUrl] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
     const handleGenerateClick = async () => {
         try {
             setIsLoading(true);
-            const response = await axios.post('http://<ip>:<port>/generate-image', {text});
-            setImageUrl(response.data.image_path); //后端需要返回image_path
+            const response = await axios.post('http://47.103.101.128:8888/generate-image', {
+              text,
+              height,
+              width,
+              step,
+              scale,
+              seed
+            });
+            setGeneratedImage(response.data.image_path); //后端需要返回image_path
             setIsLoading(false);
         }
         catch (error)  {
@@ -54,7 +66,7 @@ function App() {
               marginBottom:'20px',
             }}
           />
-          <div className='line1'>风格选择</div>
+          {/* <div className='line1'>风格选择</div>
           <select 
             value={style} 
             onChange={(e) => setStyle(e.target.value)} 
@@ -95,7 +107,7 @@ function App() {
             <div className="grid-item"><img src={image0}  alt="style9"/><h3 className='style'>风格9</h3></div>
             <div className="grid-item"><img src={image0} alt="style10" /><h3 className='style'>风格10</h3></div>
             <div className="grid-item"><img src={image0}  alt="style11"/><h3 className='style'>风格11</h3></div>
-          </div>
+          </div> */}
           <h2 className='line2'>其他设置</h2>
           <div className='style1'>种子设置</div>
           <input
@@ -167,11 +179,25 @@ function App() {
           {generatedImage && <img src={generatedImage} alt="Generated" style={{ maxWidth: '100%', maxHeight: '400px' }} />}
           <div>
             <h1 style={{ textAlign: 'center' }}>左侧输入内容，开启绘图之旅</h1>
-              {/* <div className="image-grid">
-                {images.map((image, index) => (
-                  <img key={index} src={image.url} alt={`Image ${index}`} />
-                ))}
-              </div> */}
+            {/* <div>
+            <h1 style={{ textAlign: 'center' }}>左侧输入内容，开启绘图之旅</h1>
+              {generatedImage ? <img src={generatedImage} alt="Generated Visual"
+                               style={{
+                                   maxHeight: 'calc(70vh - 40px - 40px)', // 70vh (容器高) 减去 padding-top 和 padding-bottom 和标题区域
+                                   maxWidth: 'calc(70vh - 40px)', // 70vh (容器宽) 减去 padding-left 和 padding-right
+                                   objectFit: 'contain',
+                                   borderRadius: '8px' }} /> : <div
+                  style={{
+                      width: '70vh',
+                      height: '55vh',
+                      borderRadius: '8px',
+                      backgroundColor: '#333',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      color: '#fff'
+                  }}>No image generated</div>}
+          </div> */}
           </div>
         </div>
       </div>n
