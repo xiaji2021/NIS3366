@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @font-face {
   font-family: 'font1';
   src: url('font1.ttf');
@@ -198,76 +198,3 @@ input[type="file"] {
   background: linear-gradient(to bottom right, rgb(245, 216, 255), rgb(180, 226, 255));
   border: 2px solid #000000;
 }
-
-=======
-@font-face {
-  font-family: 'font1';
-  src: url('font1.ttf');
-}
-.container {
-  display: flex;
-  height: 100vh;
-}
-.left,
-.right{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%; 
-}
-.title3 {
-  font-size: 35px;
-  text-align: center;
-  color:rgb(243, 129, 205);
-  font-family:'font1';
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.image-container {
-  width: 500px;
-  height: 400px;
-  border: 2px dashed #aaa;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.image {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.upload-text {
-  font-size: 16px;
-  color: #666;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text-input {
-  margin-top: 10px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.generate-button {
-  margin-top: 10px;
-  padding: 8px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.generate-button:hover {
-  background-color: #0056b3;
-}
->>>>>>> 15f938e283bf9c2736c1b10510f9f3486d738d43
