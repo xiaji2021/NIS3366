@@ -37,13 +37,18 @@ def generate_image():
     scale = data.get('scale')
     seed = data.get('seed')
 
+    height = int(height)
+    width = int(width)
+    step = int(step)
+    scale = float(scale)
+
     if seed is None:
         seed = DEFAULT_SEED
     else:
         try:
             seed = int(seed)
             if seed > MAX_SEED or seed <MIN_SEED:
-            return jsonify({'error': 'seed is beyond range'}), 400
+                return jsonify({'error': 'seed is beyond range'}), 400
         except ValueError:
             return jsonify({'error': 'Seed must be a number'}), 400
 
@@ -61,7 +66,7 @@ def generate_image():
     unique_filename = f"generated_image_{uuid4().hex}.png"
     output_filepath = os.path.join(app.static_folder, secure_filename(unique_filename))
 
-    model.generate_image(prompt,output_filepath,)
+    model.generate_image(prompt,output_filepath,height, width, step, scale, seed)
     # # 保存图片到静态文件夹
     # image.save(output_filepath)
 
