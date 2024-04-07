@@ -80,13 +80,6 @@ const ImageUploader = () => {
 
 
 
-
-
-
-
-
-
-
   return (
     <div className='container'>
       <div className='left'>
@@ -112,7 +105,7 @@ const ImageUploader = () => {
           <input type="text" placeholder="在此输入文字" className="text-input" />
         </div>
         <br />
-        <button type="submit" className="generate-button">生成水印</button>
+        <button type="submit" className="generate-button1">生成水印</button>
       </form>
       </div>
 

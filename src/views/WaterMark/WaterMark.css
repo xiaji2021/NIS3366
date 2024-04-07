@@ -86,9 +86,11 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   display: inline;
+  background-color: transparent;
 }
 
-.generate-button {
+.generate-button1 {
+
   place-items:center;
   width: 50%;
   margin-top: 20px; 
@@ -97,13 +99,14 @@
   font-Family:font1;
   border-radius:10px;
   padding:5px;
+  color: #000;
+  border: 2px solid #000000;
 }
 
 .generate-button:hover {
   background-color: #0056b3;
 }
 input[type="file"] {
-
   display: none;
 }
 

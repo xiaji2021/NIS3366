@@ -59,9 +59,9 @@ function ImageGenerator() {
                   onChange={(e) => setText(e.target.value)}
                   placeholder="在此输入内容，自动生成图片"
                   style={{
+                      backgroundColor: 'transparent',
                       width: '90%',
                       height: '150px',
-                      backgroundColor: 'rgb(255, 255, 255)',
                       fontSize: '20px',
                       borderRadius: '10px',
                       marginTop: '10px',
@@ -120,6 +120,7 @@ function ImageGenerator() {
                   onChange={(e) => setSeed(e.target.value)}
                   placeholder="输入一串数字"
                   style={{
+                      backgroundColor: 'transparent',
                       marginLeft: '20px',
                       width: '60%',
                       marginTop: '0px',
@@ -209,12 +210,13 @@ function ImageGenerator() {
                   style={{
                       placeItems: 'center',
                       width: '50%',
-                      marginTop: '40px',
+                      marginTop: '30px',
                       background: 'linear-gradient(to bottom right, rgb(204, 238, 85), rgb(255, 187, 255))',
                       fontSize: '24px',
                       fontFamily: 'font1',
                       borderRadius: '10px',
                       padding: '5px',
+                      marginLeft:'80px',
                   }}>
                   生成图片
               </button>
