@@ -59,9 +59,9 @@ function ImageGenerator() {
                   onChange={(e) => setText(e.target.value)}
                   placeholder="在此输入内容，自动生成图片"
                   style={{
+                      backgroundColor: 'transparent',
                       width: '90%',
-                      height: '130px',
-                      backgroundColor: 'rgb(255, 255, 255)',
+                      height: '150px',
                       fontSize: '20px',
                       borderRadius: '10px',
                       marginTop: '10px',
@@ -112,7 +112,7 @@ function ImageGenerator() {
             <div className="grid-item"><img src={image0} alt="style10" /><h3 className='style'>风格10</h3></div>
             <div className="grid-item"><img src={image0}  alt="style11"/><h3 className='style'>风格11</h3></div>
           </div> */}
-              <h2 className='line2'>其他设置</h2>
+              <h2 className='line2'>细节设置</h2>
               <div className='style1'>种子设置</div>
               <input
                   type="text"
@@ -120,8 +120,9 @@ function ImageGenerator() {
                   onChange={(e) => setSeed(e.target.value)}
                   placeholder="输入一串数字"
                   style={{
+                      backgroundColor: 'transparent',
                       marginLeft: '20px',
-                      width: '100%',
+                      width: '60%',
                       marginTop: '0px',
                       fontSize: '16px',
                       // width: '50%',
@@ -129,8 +130,8 @@ function ImageGenerator() {
                       borderRadius: '7px',
                   }}
               />
-              <div style={{marginTop: '15px'}}>
-                  <label htmlFor="imageCount" className='style1'>图片高度:{height}</label>
+              <div style={{display: 'flex', alignItems: 'center',marginTop:'20px' }}>
+                  <label htmlFor="imageCount" className='style1' style={{ marginRight: '10px' }}>图片高度:{height}</label>
                   <input
                       id="imageCount"
                       type="range"
@@ -139,6 +140,7 @@ function ImageGenerator() {
                       min="128"
                       max="1024"
                       style={{
+                          alignItems:'center',
                           marginLeft: '20px',
                           fontSize: '16px',
                           padding: '8px',
@@ -147,7 +149,7 @@ function ImageGenerator() {
                   />
 
               </div>
-              <div style={{marginTop: '15px'}}>
+              <div style={{display: 'flex', alignItems: 'center',marginTop:'20px'}}>
                   <label htmlFor="imageCount" className='style1'>图片宽度:{width}</label>
                   <input
                       id="imageCount"
@@ -165,7 +167,7 @@ function ImageGenerator() {
                   />
 
               </div>
-              <div style={{marginTop: '15px'}}>
+              <div style={{display: 'flex', alignItems: 'center',marginTop:'20px'}}>
                   <label htmlFor="imageCount" className='style1'>推理步数:{step}</label>
                   <input
                       id="imageCount"
@@ -183,7 +185,7 @@ function ImageGenerator() {
                   />
 
               </div>
-              <div style={{marginTop: '15px'}}>
+              <div style={{display: 'flex', alignItems: 'center',marginTop:'20px'}}>
                   <label htmlFor="imageCount" className='style1'>尺度:{scale}</label>
                   <input
                       id="imageCount"
@@ -208,44 +210,32 @@ function ImageGenerator() {
                   style={{
                       placeItems: 'center',
                       width: '50%',
-                      marginTop: '20px',
+                      marginTop: '30px',
                       background: 'linear-gradient(to bottom right, rgb(204, 238, 85), rgb(255, 187, 255))',
                       fontSize: '24px',
                       fontFamily: 'font1',
                       borderRadius: '10px',
                       padding: '5px',
+                      marginLeft:'80px',
                   }}>
                   生成图片
               </button>
           </div>
-
-          <div style={{flex: 1, border: '1px solid #ccc', padding: '20px'}}>
-              {generatedImage &&
-                  <img src={generatedImage} alt="Generated" style={{maxWidth: '100%', maxHeight: '400px'}}/>}
-              <div>
-                  <h1 style={{textAlign: 'center'}}>左侧输入内容，开启绘图之旅</h1>
-                  {/* <div>
-
-            <h1 style={{ textAlign: 'center' }}>左侧输入内容，开启绘图之旅</h1>
-              {generatedImage ? <img src={generatedImage} alt="Generated Visual"
-                               style={{
-                                   maxHeight: 'calc(70vh - 40px - 40px)', // 70vh (容器高) 减去 padding-top 和 padding-bottom 和标题区域
-                                   maxWidth: 'calc(70vh - 40px)', // 70vh (容器宽) 减去 padding-left 和 padding-right
-                                   objectFit: 'contain',
-                                   borderRadius: '8px' }} /> : <div
-                  style={{
-                      width: '70vh',
-                      height: '55vh',
-                      borderRadius: '8px',
-                      backgroundColor: '#333',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      color: '#fff'
-                  }}>No image generated</div>}
-          </div> */}
-          </div>
+          <div style={{ flex: 1, border: '1px solid #ccc', padding: '20px', position: 'relative' }}>
+            {generatedImage ? ( 
+                <div style={{ position: 'relative' }}>
+                <img src={image0} alt="Generated" style={{ width: '900px', height: '750px', marginTop: '30px',marginLeft:'60px', display: 'block' }} />
+                <div style={{ position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)', fontFamily:'font3',fontWeight:'bold', padding: '5px', borderRadius: '5px' }}>
+                <p style={{ margin: '0' }}>图片生成成功</p>
+      </div>
+    </div>
+            ) : (
+                <div style={{ textAlign: 'center', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+                    <h1 style={{ textAlign: 'center' ,fontFamily:'font3'}}>左侧输入内容，开启绘图之旅</h1>
+                </div>
+            )}
         </div>
+
       </div>
     </div>
   );

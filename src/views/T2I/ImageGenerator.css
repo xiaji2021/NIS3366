@@ -6,12 +6,16 @@
     font-family: 'font2';
     src: url('font2.ttf');
 }
+@font-face {
+    font-family: 'font3';
+    src: url('font3.ttf');
+}
 .title{
     font-size: 35px;
     text-align: center;
     color:rgb(243, 129, 205);
     font-family:'font1';
-    margin-top: 0px;
+    margin-top: 30px;
     margin-bottom: 0px;
 }
 .line1{
@@ -28,8 +32,8 @@
     text-align:left;
     color:rgb(30, 66, 99);
     font-family: 'font2';
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .grid-container {
     display: grid;
@@ -48,8 +52,10 @@
     margin: 0px;
 }
 .style1{
+    font-family: 'font3';
     font-size: 20px;
     display: inline;
+    font-weight: bold;
 }
 .inline{
     display: inline;

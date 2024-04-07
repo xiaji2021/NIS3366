@@ -78,31 +78,34 @@ const Entity = () => {
     return (
         <div className='container'>
             <div className='left'>
-                <h1 className="title3">实体抽取</h1>
-                <div className="image-container"
-                     onDrop={handleDrop}
-                     onDragOver={(e) => e.preventDefault()}
+                <h1 className="title3">实体抽取/Entity Extraction</h1>
+                <div className="image-container1"
+                    onDrop={handleDrop}
+                    onDragOver={(e) => e.preventDefault()}
                 >
                     {image ? (
                         <img src={image} alt="Uploaded" className="image"/>
                     ) : (
-                        <p className="upload-text">将图片拖拽放入此处&点击此处选择图片文件</p>
+                        <p className="upload-text">将图片拖拽放入此处&点击下方选择图片文件</p>
                     )}
                 </div>
+                <form className="form" onSubmit={handleSubmit}></form>
+                <label className="custom-file-upload1">
+                    点击此处上传图片
+                    <input type="file" onChange={handleImageUpload} accept="image/*" />
+                </label> 
                 <form className="form" onSubmit={handleSubmit}>
                     <input type="file" onChange={handleImageUpload} accept="image/*"/>
-
-                    <br/>
-                    <button type="submit" className="generate-button">运行</button>
+                    <button type="submit" className="generate-button">实体抽取</button>
                 </form>
             </div>
 
 
             <div className='right'>
-                <h1 className="title3">实体抽取结果</h1>
+                <h1 className="title3">抽取结果/Running Results</h1>
                 <div className="image-container"
-                     onDrop={handleDrop}
-                     onDragOver={(e) => e.preventDefault()}
+                    onDrop={handleDrop}
+                    onDragOver={(e) => e.preventDefault()}
                 >
                     {watermarkImage ? (
                         <img src={watermarkImage} alt="Uploaded" className="image"/>
