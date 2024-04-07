@@ -4,6 +4,7 @@ import './WaterMark.css';
 import axios from "axios";
 
 const ImageUploader = () => {
+  
   // State for the uploaded image
   const [image, setImage] = useState(null);
   const [text, setText] = useState('');
@@ -48,13 +49,13 @@ const ImageUploader = () => {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
-        })
+        }) 
+
         setImage1(response.data.image_path);
         console.log('test')
     } catch (error) {
-        console.error(error);
+        alert(error);
     }
-
 
     console.log('Generating watermark...');
     };
@@ -117,7 +118,7 @@ const ImageUploader = () => {
   //       setWatermarkImage(response.data.image_path);
   //       console.log('test')
   //   } catch (error) {
-  //       console.error(error);
+  //       alert(error);
   //   }
   
   const handleDetect1 = async (e) => {
@@ -153,7 +154,7 @@ const ImageUploader = () => {
         setBackendText(response.data.text_detected);// 注意后端返回的键值
         
     } catch (error) {
-        console.error(error);
+        alert(error);
     }
     
   };

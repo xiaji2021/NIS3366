@@ -3,6 +3,7 @@ import './Entity.css';
 import axios from "axios";
 
 const Entity = () => {
+    axios.get('/load-model/entity');
     // 用于保存上传图片的状态
     const [image, setImage] = useState(null);
     const [watermarkImage, setWatermarkImage] = useState(null);
@@ -57,7 +58,7 @@ const Entity = () => {
             setWatermarkImage(response.data.image_path);
             console.log('test')
         } catch (error) {
-            console.error(error);
+            alert(error);
         }
 
 

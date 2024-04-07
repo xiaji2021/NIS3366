@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: blind-watermark
+Version: 0.3.2
+Summary: Blind Watermark in Python
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: linux
+Platform: windows
+Platform: macos
+Requires-Python: >=3.5
+
+UNKNOWN
+

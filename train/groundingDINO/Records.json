@@ -1,0 +1,322 @@
+[
+    {
+        "image_id": "book.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "traffic light.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "frisbee.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "wine glass.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "car.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "suitcase.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "keyboard.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "bed.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "fire hydrant.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "bird.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "cell phone.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "toaster.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "baseball glove.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "parking meter.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "orange.jpg",
+        "entity_found": false
+    },
+    {
+        "image_id": "airplane.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "couch.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "toilet.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "sandwich.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "bicycle.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "bottle.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "donut.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "remote.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "cake.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "fork.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "scissors.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "pizza.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "apple.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "zebra.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "backpack.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "surfboard.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "refrigerator.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "sink.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "umbrella.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "laptop.jpg",
+        "entity_found": false
+    },
+    {
+        "image_id": "bear.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "dining table.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "vase.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "kite.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "bus.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "skateboard.jpg",
+        "entity_found": false
+    },
+    {
+        "image_id": "cup.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "cat.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "cow.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "mouse.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "broccoli.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "truck.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "bench.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "boat.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "spoon.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "horse.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "dog.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "toothbrush.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "stop sign.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "carrot.jpg",
+        "entity_found": false
+    },
+    {
+        "image_id": "train.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "tv.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "hot dog.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "oven.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "motorcycle.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "handbag.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "clock.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "tennis racket.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "elephant.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "snowboard.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "giraffe.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "skis.jpg",
+        "entity_found": false
+    },
+    {
+        "image_id": "tie.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "hair drier.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "baseball bat.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "teddy bear.jpg",
+        "entity_found": false
+    },
+    {
+        "image_id": "person.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "sheep.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "sports ball.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "microwave.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "potted plant.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "banana.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "knife.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "chair.jpg",
+        "entity_found": true
+    },
+    {
+        "image_id": "bowl.jpg",
+        "entity_found": true
+    }
+]

@@ -3,6 +3,7 @@ import './ImageGenerator.css'
 import image0 from './1.png'
 import axios from 'axios';
 function ImageGenerator() {
+    axios.get('/load-model/t2i');
     const [text, setText] = useState('');//输入文本
     // const [style, setStyle] = useState('default');//风格选择
     const [seed, setSeed] = useState('');//输入种子
@@ -32,7 +33,7 @@ function ImageGenerator() {
             setIsLoading(false);
         }
         catch (error)  {
-            console.error('Error generating image:', error);
+            alert(`Error generating image: ${error}`);
             setIsLoading(false);
         }
     };

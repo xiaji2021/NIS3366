@@ -23,11 +23,35 @@ MAX_SEED = 2**32 -1
 app = Flask(__name__, static_folder='static')
 CORS(app)  # 启用 CORS
 
+model = None
+
+# 如何释放？
+@app.route('/load-model/t2i',methods=['GET'])
+def load_t2i():
+    global model
+    if model is not None:
+        del model
+        model = None
+    import gc
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    model = STABLE_DIFFUSION()
+
+@app.route('/load-model/entity',methods=['GET'])
+def load_entity():
+    global model
+    if model is not None:
+        model = None
+    import gc
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    model = QWEN_VL()
+
 
 @app.route('/generate-image', methods=['POST'])
-
 def generate_image():
-    model = STABLE_DIFFUSION()
 
     data = request.json
     prompt = data.get('text')
@@ -69,7 +93,7 @@ def generate_image():
     output_filepath = os.path.join(app.static_folder, 'txt2images', unique_filename)
     if not os.path.exists(os.path.join(app.static_folder, 'txt2images')):
         os.mkdir(os.path.join(app.static_folder, 'txt2images'))
-
+    //等待？
     model.generate_image(prompt,output_filepath,height, width, step, scale, seed)
     # # 保存图片到静态文件夹
     # image.save(output_filepath)
@@ -89,7 +113,6 @@ def images(filename):
 
 @app.route('/entity-gen', methods=['POST'])
 def entity():
-    model = QWEN_VL()
     dic_path = os.path.join(app.static_folder, 'entity_origin')
     # 存储原始图片的目录
     if not os.path.exists(dic_path):

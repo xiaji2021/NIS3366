@@ -1,0 +1,964 @@
+[
+    {
+        "id": "book",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/book.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>book</ref><box>(778.0278930664062,692.8756103515625),(443.91668701171875,162.99212646484375)</box>."
+            }
+        ]
+    },
+    {
+        "id": "traffic light",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/traffic light.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>traffic light</ref><box>(455.5543518066406,579.0820922851562),(508.45318603515625,746.567626953125)</box>."
+            }
+        ]
+    },
+    {
+        "id": "frisbee",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/frisbee.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>frisbee</ref><box>(325.8437805175781,897.4510498046875),(185.89471435546875,138.83370971679688)</box>."
+            }
+        ]
+    },
+    {
+        "id": "wine glass",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/wine glass.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>wine glass</ref><box>(537.1967163085938,500.11407470703125),(396.1186828613281,999.9962768554688)</box>."
+            }
+        ]
+    },
+    {
+        "id": "car",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/car.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>car</ref><box>(451.0670471191406,593.0284423828125),(902.5010986328125,461.17218017578125)</box>."
+            }
+        ]
+    },
+    {
+        "id": "suitcase",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/suitcase.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>suitcase</ref><box>(466.60418701171875,505.808349609375),(933.2222290039062,897.9734497070312)</box>."
+            }
+        ]
+    },
+    {
+        "id": "keyboard",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/keyboard.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>keyboard</ref><box>(513.9362182617188,567.3431396484375),(971.7274169921875,470.9690246582031)</box>."
+            }
+        ]
+    },
+    {
+        "id": "bed",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/bed.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>bed</ref><box>(504.50909423828125,586.154541015625),(975.4552612304688,536.1802368164062)</box>."
+            }
+        ]
+    },
+    {
+        "id": "fire hydrant",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/fire hydrant.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>fire hydrant</ref><box>(508.779296875,499.9654846191406),(748.04541015625,999.9968872070312)</box>."
+            }
+        ]
+    },
+    {
+        "id": "bird",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/bird.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>bird</ref><box>(560.91796875,570.349853515625),(679.2019653320312,852.3021240234375)</box>."
+            }
+        ]
+    },
+    {
+        "id": "cell phone",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/cell phone.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>cell phone</ref><box>(324.90960693359375,580.9849243164062),(383.4716491699219,751.9295043945312)</box>."
+            }
+        ]
+    },
+    {
+        "id": "toaster",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/toaster.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>toaster</ref><box>(502.48187255859375,400.77569580078125),(879.2034912109375,719.4259033203125)</box>."
+            }
+        ]
+    },
+    {
+        "id": "baseball glove",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/baseball glove.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>baseball glove</ref><box>(537.2756958007812,516.7669677734375),(925.81103515625,920.4451904296875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "parking meter",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/parking meter.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>parking meter</ref><box>(564.5117797851562,519.4564819335938),(870.8401489257812,960.7356567382812)</box>."
+            }
+        ]
+    },
+    {
+        "id": "airplane",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/airplane.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>airplane</ref><box>(500.0711669921875,482.1015930175781),(999.9970092773438,524.6922607421875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "couch",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/couch.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>couch</ref><box>(502.3587341308594,663.7494506835938),(887.376708984375,400.3255920410156)</box>."
+            }
+        ]
+    },
+    {
+        "id": "toilet",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/toilet.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>toilet</ref><box>(490.9109802246094,499.9500427246094),(557.964599609375,999.9849853515625)</box>."
+            }
+        ]
+    },
+    {
+        "id": "sandwich",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/sandwich.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>sandwich</ref><box>(225.1332244873047,425.4994812011719),(450.60174560546875,566.4429321289062)</box>."
+            }
+        ]
+    },
+    {
+        "id": "bicycle",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/bicycle.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>bicycle</ref><box>(500.05401611328125,521.5484619140625),(999.9954833984375,703.88671875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "bottle",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/bottle.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>bottle</ref><box>(504.6329040527344,488.0014343261719),(373.66876220703125,794.3927612304688)</box>."
+            }
+        ]
+    },
+    {
+        "id": "donut",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/donut.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>donut</ref><box>(581.097412109375,760.9781494140625),(481.2330017089844,451.2994689941406)</box>."
+            }
+        ]
+    },
+    {
+        "id": "remote",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/remote.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>remote</ref><box>(670.5531005859375,488.687744140625),(310.6724853515625,797.5506591796875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "cake",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/cake.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>cake</ref><box>(514.137939453125,499.98516845703125),(804.4083862304688,999.999267578125)</box>."
+            }
+        ]
+    },
+    {
+        "id": "fork",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/fork.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>fork</ref><box>(419.2889709472656,509.03106689453125),(789.47509765625,981.5090942382812)</box>."
+            }
+        ]
+    },
+    {
+        "id": "scissors",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/scissors.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>scissors</ref><box>(526.1332397460938,500.2049255371094),(535.3585815429688,999.9983520507812)</box>."
+            }
+        ]
+    },
+    {
+        "id": "pizza",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/pizza.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>pizza</ref><box>(500.05810546875,505.9486083984375),(999.9970092773438,885.1726684570312)</box>."
+            }
+        ]
+    },
+    {
+        "id": "apple",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/apple.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>apple</ref><box>(502.16644287109375,520.698486328125),(631.8744506835938,957.44384765625)</box>."
+            }
+        ]
+    },
+    {
+        "id": "zebra",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/zebra.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>zebra</ref><box>(496.1733093261719,500.05120849609375),(992.2073364257812,999.9978637695312)</box>."
+            }
+        ]
+    },
+    {
+        "id": "backpack",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/backpack.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>backpack</ref><box>(654.4474487304688,548.8884887695312),(632.4016723632812,897.1212158203125)</box>."
+            }
+        ]
+    },
+    {
+        "id": "surfboard",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/surfboard.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>surfboard</ref><box>(500.1116943359375,451.1961364746094),(999.9614868164062,688.7830200195312)</box>."
+            }
+        ]
+    },
+    {
+        "id": "refrigerator",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/refrigerator.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>refrigerator</ref><box>(509.8207092285156,494.1400146484375),(511.3945007324219,779.4678344726562)</box>."
+            }
+        ]
+    },
+    {
+        "id": "sink",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/sink.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>sink</ref><box>(498.72027587890625,489.6094055175781),(489.6578063964844,277.71917724609375)</box>."
+            }
+        ]
+    },
+    {
+        "id": "umbrella",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/umbrella.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>umbrella</ref><box>(404.5475769042969,445.7860412597656),(470.386474609375,512.2844848632812)</box>."
+            }
+        ]
+    },
+    {
+        "id": "bear",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/bear.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>bear</ref><box>(431.6885681152344,562.048583984375),(863.0638427734375,875.861083984375)</box>."
+            }
+        ]
+    },
+    {
+        "id": "dining table",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/dining table.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>dining table</ref><box>(454.2423400878906,680.062255859375),(907.5240478515625,530.266845703125)</box>."
+            }
+        ]
+    },
+    {
+        "id": "vase",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/vase.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>vase</ref><box>(529.0238647460938,891.5711059570312),(278.89166259765625,216.49703979492188)</box>."
+            }
+        ]
+    },
+    {
+        "id": "kite",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/kite.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>kite</ref><box>(476.0237121582031,528.0930786132812),(698.6044311523438,892.545654296875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "bus",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/bus.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>bus</ref><box>(448.3545837402344,570.9505004882812),(880.6624755859375,531.244384765625)</box>."
+            }
+        ]
+    },
+    {
+        "id": "cup",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/cup.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>cup</ref><box>(754.7485961914062,516.47314453125),(424.73095703125,441.24798583984375)</box>."
+            }
+        ]
+    },
+    {
+        "id": "cat",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/cat.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>cat</ref><box>(500.017822265625,499.9742431640625),(999.9991455078125,999.99951171875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "cow",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/cow.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>cow</ref><box>(500.05145263671875,504.0003662109375),(999.9981079101562,991.8359985351562)</box>."
+            }
+        ]
+    },
+    {
+        "id": "mouse",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/mouse.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>mouse</ref><box>(342.5738220214844,479.11395263671875),(670.3016967773438,505.05877685546875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "broccoli",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/broccoli.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>broccoli</ref><box>(142.38232421875,488.9715270996094),(284.8999938964844,536.7134399414062)</box>."
+            }
+        ]
+    },
+    {
+        "id": "truck",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/truck.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>truck</ref><box>(537.0460205078125,478.80499267578125),(785.6326904296875,655.6298217773438)</box>."
+            }
+        ]
+    },
+    {
+        "id": "bench",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/bench.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>bench</ref><box>(507.4588623046875,726.6197509765625),(870.1824951171875,363.4505310058594)</box>."
+            }
+        ]
+    },
+    {
+        "id": "boat",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/boat.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>boat</ref><box>(587.982177734375,599.4364624023438),(824.1655883789062,320.62255859375)</box>."
+            }
+        ]
+    },
+    {
+        "id": "spoon",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/spoon.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>spoon</ref><box>(482.6454772949219,500.71148681640625),(656.9312744140625,564.0596313476562)</box>."
+            }
+        ]
+    },
+    {
+        "id": "horse",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/horse.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>horse</ref><box>(499.9935607910156,517.6141967773438),(999.9993896484375,964.705078125)</box>."
+            }
+        ]
+    },
+    {
+        "id": "dog",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/dog.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>dog</ref><box>(526.7550659179688,505.296875),(839.7814331054688,988.7108154296875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "toothbrush",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/toothbrush.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>toothbrush</ref><box>(270.55364990234375,495.98663330078125),(56.108638763427734,660.5994873046875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "stop sign",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/stop sign.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>stop sign</ref><box>(374.00799560546875,655.7096557617188),(695.4979248046875,610.0234985351562)</box>."
+            }
+        ]
+    },
+    {
+        "id": "train",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/train.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>train</ref><box>(450.24615478515625,562.2388305664062),(900.4708862304688,539.271728515625)</box>."
+            }
+        ]
+    },
+    {
+        "id": "tv",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/tv.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>tv</ref><box>(559.44189453125,470.09716796875),(536.403076171875,334.1723327636719)</box>."
+            }
+        ]
+    },
+    {
+        "id": "hot dog",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/hot dog.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>hot dog</ref><box>(446.2734680175781,685.0015258789062),(774.853515625,359.0982971191406)</box>."
+            }
+        ]
+    },
+    {
+        "id": "oven",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/oven.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>oven</ref><box>(319.2903137207031,595.727294921875),(377.9947814941406,807.0159301757812)</box>."
+            }
+        ]
+    },
+    {
+        "id": "motorcycle",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/motorcycle.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>motorcycle</ref><box>(499.9687805175781,478.8307800292969),(999.998779296875,835.4384765625)</box>."
+            }
+        ]
+    },
+    {
+        "id": "handbag",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/handbag.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>handbag</ref><box>(501.2264709472656,516.65478515625),(686.8842163085938,736.4013671875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "clock",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/clock.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>clock</ref><box>(493.4814758300781,497.4366149902344),(952.6423950195312,955.6525268554688)</box>."
+            }
+        ]
+    },
+    {
+        "id": "tennis racket",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/tennis racket.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>tennis racket</ref><box>(534.3333129882812,498.98388671875),(898.55517578125,971.6275024414062)</box>."
+            }
+        ]
+    },
+    {
+        "id": "elephant",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/elephant.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>elephant</ref><box>(499.92584228515625,585.5676879882812),(999.9620971679688,829.4935913085938)</box>."
+            }
+        ]
+    },
+    {
+        "id": "snowboard",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/snowboard.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>snowboard</ref><box>(855.9305419921875,369.1987609863281),(221.3839874267578,123.92371368408203)</box>."
+            }
+        ]
+    },
+    {
+        "id": "giraffe",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/giraffe.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>giraffe</ref><box>(491.4651184082031,499.9429626464844),(982.6111450195312,999.998779296875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "tie",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/tie.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>tie</ref><box>(512.1320190429688,500.3290710449219),(952.1573486328125,999.9998779296875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "hair drier",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/hair drier.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>hair drier</ref><box>(547.0391845703125,534.876220703125),(905.7103881835938,930.0277709960938)</box>."
+            }
+        ]
+    },
+    {
+        "id": "baseball bat",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/baseball bat.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>baseball bat</ref><box>(500.08941650390625,500.0703430175781),(999.9987182617188,999.9996337890625)</box>."
+            }
+        ]
+    },
+    {
+        "id": "person",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/person.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>person</ref><box>(176.9890899658203,515.234130859375),(353.5315856933594,969.4835205078125)</box>."
+            }
+        ]
+    },
+    {
+        "id": "sheep",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/sheep.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>sheep</ref><box>(563.346435546875,500.1078796386719),(873.63330078125,999.9981079101562)</box>."
+            }
+        ]
+    },
+    {
+        "id": "sports ball",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/sports ball.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>sports ball</ref><box>(552.7228393554688,505.74951171875),(581.9389038085938,596.0848388671875)</box>."
+            }
+        ]
+    },
+    {
+        "id": "microwave",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/microwave.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>microwave</ref><box>(446.15814208984375,446.54937744140625),(892.2317504882812,711.7197265625)</box>."
+            }
+        ]
+    },
+    {
+        "id": "potted plant",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/potted plant.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>potted plant</ref><box>(499.9350891113281,492.60888671875),(999.99951171875,984.4999389648438)</box>."
+            }
+        ]
+    },
+    {
+        "id": "banana",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/banana.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>banana</ref><box>(326.7277526855469,506.9264831542969),(380.7469482421875,820.0346069335938)</box>."
+            }
+        ]
+    },
+    {
+        "id": "knife",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/knife.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>knife</ref><box>(500.216064453125,309.4750061035156),(999.9923706054688,559.1062622070312)</box>."
+            }
+        ]
+    },
+    {
+        "id": "chair",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/chair.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>chair</ref><box>(530.1800537109375,458.37451171875),(675.2496948242188,916.7195434570312)</box>."
+            }
+        ]
+    },
+    {
+        "id": "bowl",
+        "conversations": [
+            {
+                "from": "user",
+                "value": "Picture 1: <img>/root/results/diffusers/bowl.jpg</img>\n Generate the caption in English with grounding:"
+            },
+            {
+                "from": "assistant",
+                "value": "There is a <ref>bowl</ref><box>(462.18359375,514.660400390625),(696.2042846679688,579.200927734375)</box>."
+            }
+        ]
+    }
+]
