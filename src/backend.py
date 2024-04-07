@@ -14,7 +14,7 @@ DEFAULT_SEED = 1234
 MIN_SEED = 0
 MAX_SEED = 2**32 -1
 
-app = Flask(__name__, static_folder='images')
+app = Flask(__name__, static_folder='static')
 CORS(app)  # 启用 CORS
 
 # model = StableDiffusionPipeline.from_pretrained(
@@ -24,11 +24,14 @@ CORS(app)  # 启用 CORS
 # )
 # model.to("cuda")
 
-model = STABLE_DIFFUSION()
+
 
 
 @app.route('/generate-image', methods=['POST'])
+
 def generate_image():
+    model = STABLE_DIFFUSION()
+
     data = request.json
     prompt = data.get('text')
     height = data.get('height')
@@ -64,23 +67,37 @@ def generate_image():
     # image = model.generate_image(prompt).images[0]
     # 使用 secure_filename 清洁文件名
     unique_filename = f"generated_image_{uuid4().hex}.png"
-    output_filepath = os.path.join(app.static_folder, secure_filename(unique_filename))
+    output_filepath = os.path.join(app.static_folder, 'txt2images', secure_filename(unique_filename))
+    if os.path.exists
 
     model.generate_image(prompt,output_filepath,height, width, step, scale, seed)
     # # 保存图片到静态文件夹
     # image.save(output_filepath)
 
     # 构建图片的URL
-    image_url = request.host_url + 'images/' + unique_filename
+    image_url = request.host_url + 'txt2images/' + unique_filename
 
     # 返回包含图片URL的响应
     return jsonify({'image_path': image_url})
 
 
 # 路由提供静态文件夹中的图片
-@app.route('/images/<filename>')
+@app.route('/txt2images/<filename>')
 def images(filename):
     return send_from_directory(app.static_folder, filename)
 
+// app.static_folder可能需要进行区分
+
+@app.route('/watermark-gen', methods=['POST'])
+
+
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8888)
+
+
+
+
+
+
