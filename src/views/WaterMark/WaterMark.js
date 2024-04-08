@@ -75,9 +75,6 @@ const ImageUploader = () => {
 
 
 
-
-
-
   const [Image1, setImage1] = useState(null);
   const [method1, setMethod1] = useState('');
   const [result1, setResult1] = useState('');
@@ -163,11 +160,8 @@ const ImageUploader = () => {
     e.preventDefault();
   };
 
-
-
-
   return (
-    <div className='container'>
+    <div className='container' >
       <div className='left'>
         <h1 className="title3">水印生成/Watermark Generation</h1>
         <div
@@ -195,55 +189,50 @@ const ImageUploader = () => {
       </form>
       </div>
 
-
-
-
-
-
-
       <div className='right'>
-        <div className="App">
-          <h1 className='title3'>水印检测/Watermark Detection</h1>
-          <div
-            className="drop-zone"
-            onDrop={handleDrop1}
-            onDragOver={handleDragOver1}
-          >
-          {Image1 ? (
-            <img src={Image1} alt="Dropped" className="dropped-image" />
-          ) : (
-            <p className="upload-text">将图片拖拽放入此处&自动放置左侧的生成图片</p>
-          )}
-          </div>
-          <div class="watermark-info">
-    <label for="watermark-text">水印信息为：</label>
-    <input type="text" id="watermark-text" value={backendText} readonly />
-      </div>
-          <div className="method-buttons">
-            <button onClick={() => handleMethodChange1('bright')} className='attack'>
-              bright
-            </button>
-            <button onClick={() => handleMethodChange1('shelter')} className='attack'>
-            shelter
-            </button>
-            <button onClick={() => handleMethodChange1('salt')} className='attack'>
-            salt
-            </button>
-            <button onClick={() => handleMethodChange1('rot')} className='attack'>
-              rotation
-            </button>
+          {/*<div className="App">*/}
+              <h1 className='title3'>水印检测/Watermark Detection</h1>
+              <div
+                  className="image-container"
+                  onDrop={handleDrop1}
+                  onDragOver={handleDragOver1}
+              >
+                  {Image1 ? (
+                      <img src={Image1} alt="Dropped" className="dropped-image"/>
+                  ) : (
+                      <p className="upload-text">将图片拖拽放入此处&自动放置左侧的生成图片</p>
+                  )}
+              </div>
+
+              <div className="method-buttons">
+                  <button onClick={() => handleMethodChange1('bright')} className='attack'>
+                      bright
+                  </button>
+                  <button onClick={() => handleMethodChange1('shelter')} className='attack'>
+                      shelter
+                  </button>
+                  <button onClick={() => handleMethodChange1('salt')} className='attack'>
+                      salt
+                  </button>
+                  <button onClick={() => handleMethodChange1('rot')} className='attack'>
+                      rotation
+                  </button>
+
+              </div>
+              <div className="watermark-info">
+                  <label className="line4">水印信息为：</label>
+                  <input type="text" id="watermark-text" value={backendText} className="text-input"/>
+              </div>
+              <div className="selected-method">{selectedAttack}</div>
+              {/* 显示选择的攻击方式 */}
+              <button type="submit" onClick={handleDetect1} className="detect-button">
+                  检测水印
+              </button>
+
+              <div className="result">{result1}</div>
 
           </div>
-
-          <div className="selected-method">{selectedAttack}</div> {/* 显示选择的攻击方式 */}
-          <button type="submit" onClick={handleDetect1}  className="detect-button">
-            检测水印
-          </button>
-
-      <div className="result">{result1}</div>
-      
-    </div>
-    </div>
+      {/*</div>*/}
     </div>
   );
 };

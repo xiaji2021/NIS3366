@@ -104,7 +104,7 @@ const Entity = () => {
 
             <div className='right'>
                 <h1 className="title3">抽取结果/Running Results</h1>
-                <div className="image-container"
+                <div className="image-container2"
                     onDrop={handleDrop}
                     onDragOver={(e) => e.preventDefault()}
                 >

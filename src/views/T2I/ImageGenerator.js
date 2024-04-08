@@ -38,11 +38,8 @@ function ImageGenerator() {
         }
     };
 
-
-
-
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', height: '100vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', height: '100%' }}>
       <div style={{
         display:'flex',
         width: '100%',
@@ -62,7 +59,7 @@ function ImageGenerator() {
                   style={{
                       backgroundColor: 'transparent',
                       width: '90%',
-                      height: '150px',
+                      height: '110px',
                       fontSize: '20px',
                       borderRadius: '10px',
                       marginTop: '10px',
