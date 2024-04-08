@@ -12,6 +12,28 @@ from Stable_Diffusion import STABLE_DIFFUSION
 from Qwen_VL import QWEN_VL
 from blind_watermark import WaterMark
 from blind_watermark import AttackFunctions
+from werkzeug.security import check_password_hash
+from werkzeug.security import generate_password_hash
+
+import psycopg2
+
+db_config = {
+    'host': 'localhost',
+    'dbname': 'nis3366',
+    'user': 'nis3366',
+    'password': 'nieEEGG'
+}
+def get_db_connection():
+    conn = psycopg2.connect(**db_config)
+    return conn
+def user_exists(username):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM users WHERE username = %s', (username,))
+    user = cursor.fetchone()
+    cursor.close()
+    conn.close()
+    return user is not None
 
 len_wm = 0;
 
@@ -22,6 +44,84 @@ MAX_SEED = 2**32 -1
 
 app = Flask(__name__, static_folder='static')
 CORS(app)  # 启用 CORS
+
+users = {
+    "user1":"password_hash1"
+    "user2":"password_hash2"
+
+}
+
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+    if username in users and check_password_hash(users[username], password):
+        # 登录成功，返回 token 或其他认证信息
+        return jsonify({'message': '登录成功', 'token': 'some_token'}), 200
+    else:
+        # 登录失败，返回错误信息
+        return jsonify({'error': '用户名或密码错误'}), 401
+
+
+@app.route('/api/register', methods=['POST'])
+def register():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+    email = data.get('email')
+
+    if not username:
+        return jsonify({'message': '用户名不可为空'}), 400
+
+    if user_exists(username):
+        return jsonify({'message': '用户名已存在'}), 400
+
+    # 密码应该进行哈希处理后再存储
+    password_hash = generate_password_hash(password)
+
+    conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute(
+            'INSERT INTO users (username, password_hash, email) VALUES (%s, %s, %s)',
+            (username, password_hash, email)
+        )
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+    # 返回注册成功的响应
+    return jsonify({'message': '注册成功'}), 201
+
+
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+
+    if not username or not password:
+        return jsonify({'message': '用户名和密码都不可为空'}), 400
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute('SELECT password_hash FROM users WHERE username = %s', (username,))
+    user = cursor.fetchone()
+    cursor.close()
+    conn.close()
+
+    if user is None:
+        return jsonify({'message': '用户名或密码错误'}), 401
+
+    password_hash = user[0]
+    if not check_password_hash(password_hash, password):
+        return jsonify({'message': '用户名或密码错误'}), 401
+
+    # 如果需要，这里可以生成并返回一个登录令牌或创建一个会话
+    # 例如：token = generate_token(username)
+
+    # 返回登录成功的响应
+    return jsonify({'message': '登录成功'}), 200
 
 # model = None
 

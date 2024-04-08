@@ -1,27 +1,113 @@
+/*@font-face {*/
+/*    font-family: 'font3';*/
+/*    src: url('font3.ttf');*/
+/*}*/
+/*.welcome{*/
+/*    margin-left: 0px;*/
+/*    font-family: 'font3';*/
+/*    font-size: 30px;*/
+/*    color: #6ac1ff;*/
+/*    margin-top: 0px;*/
+/*    margin-bottom: 0px;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.navbar {*/
+/*    background-image: linear-gradient(to bottom left, #1d2929, #cc81c9); */
+/*    display: flex;*/
+/*    justify-content: center; */
+/*}*/
+/*.nav-container {*/
+/*    height:50px;*/
+/*    width: 100%;*/
+/*    max-width: 95%;*/
+/*    display: flex;*/
+/*    justify-content: space-between; */
+/*    align-items: center;*/
+/*    padding: 10px 20px;*/
+/*}*/
+/*.nav-menu {*/
+/*    display: flex;*/
+/*    list-style: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+/*.nav-item {*/
+/*    margin-right: 15px; */
+/*}*/
+/*.nav-links {*/
+/*    font-weight: bold;*/
+/*    font-family: 'font3';*/
+/*    font-size: 24px;*/
+/*    color: #fff;*/
+/*    text-decoration: none; */
+/*    padding: 10px 15px; */
+/*    border-radius: 5px; */
+/*}*/
+/*.nav-links:hover {*/
+/*    background-color: #9867d4; */
+/*}*/
+/*.nav-logo img {*/
+/*    width: 50px; */
+/*    height:50px; */
+/*}*/
+
+/*!* 用户下拉菜单的样式 *!*/
+/*.user-dropdown {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.dropdown-toggle {*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.dropdown-content {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: #f9f9f9;*/
+/*    min-width: 160px;*/
+/*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.dropdown-content .dropdown-item {*/
+/*    color: black;*/
+/*    padding: 12px 16px;*/
+/*    text-decoration: none;*/
+/*    display: block;*/
+/*}*/
+
+/*.user-dropdown:hover .dropdown-content {*/
+/*    display: block;*/
+/*}*/
+
+/*.dropdown-content .dropdown-item:hover {*/
+/*    background-color: #ddd;*/
+/*}*/
+
 @font-face {
     font-family: 'font3';
     src: url('font3.ttf');
 }
-.welcome{
-    margin-left: 0px;
+.welcome {
     font-family: 'font3';
     font-size: 30px;
     color: #6ac1ff;
-    margin-top: 0px;
-    margin-bottom: 0px;
     font-weight: bold;
+    margin: 0; /* 统一设置 margin 为 0 */
 }
 .navbar {
-    background-image: linear-gradient(to bottom left, #1d2929, #cc81c9); 
+    background-image: linear-gradient(to right, rgba(3, 190, 232, 0.8), rgba(108, 117, 125, 0.8)); /* 渐变颜色，左边蓝色，右边灰色，都添加了些许透明度 */
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
+
 .nav-container {
-    height:50px;
+    height: 50px;
     width: 100%;
     max-width: 95%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
 }
@@ -32,21 +118,56 @@
     padding: 0;
 }
 .nav-item {
-    margin-right: 15px; 
+    margin-right: 15px;
 }
 .nav-links {
     font-weight: bold;
     font-family: 'font3';
-    font-size: 24px;
-    color: #fff;
-    text-decoration: none; 
-    padding: 10px 15px; 
-    border-radius: 5px; 
+    font-size: 16px;
+    color: #f8f9fa; /* 淡白色字体 */
+    text-decoration: none;
+
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
 }
 .nav-links:hover {
-    background-color: #9867d4; 
+    background-color: #1787a1; /* 深蓝色背景 */
 }
 .nav-logo img {
-    width: 50px; 
-    height:50px; 
+    width: 50px;
+    height: 50px;
+}
+
+/* 用户下拉菜单的样式 */
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa; /* 淡白色背景 */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content .dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content .dropdown-item:hover {
+    background-color: #e9ecef; /* 淡灰色背景 */
 }
