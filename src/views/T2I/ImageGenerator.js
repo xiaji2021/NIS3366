@@ -3,7 +3,7 @@ import './ImageGenerator.css'
 import image0 from './1.png'
 import axios from 'axios';
 function ImageGenerator() {
-    axios.get('/load-model/t2i');
+    // axios.get('/load-model/t2i');
     const [text, setText] = useState('');//输入文本
     // const [style, setStyle] = useState('default');//风格选择
     const [seed, setSeed] = useState('');//输入种子
@@ -225,7 +225,7 @@ function ImageGenerator() {
           <div style={{ flex: 1, border: '1px solid #ccc', padding: '20px', position: 'relative' }}>
             {generatedImage ? ( 
                 <div style={{ position: 'relative' }}>
-                <img src={image0} alt="Generated" style={{ width: '900px', height: '750px', marginTop: '30px',marginLeft:'60px', display: 'block' }} />
+                <img src={generatedImage} alt="Generated" style={{ width: '60%', marginTop: '30px',marginLeft:'60px', display: 'block' }} />
                 <div style={{ position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)', fontFamily:'font3',fontWeight:'bold', padding: '5px', borderRadius: '5px' }}>
                 <p style={{ margin: '0' }}>图片生成成功</p>
       </div>
