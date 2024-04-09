@@ -33,7 +33,7 @@ function Navbar() {
                         </li>
                         <li className="nav-item nav-links">
                             <NavLink to="/entity" className="nav-link" activeClassName="active">
-                                实体抽取
+                                实体检测
                             </NavLink>
                         </li>
                         <li className="nav-item dropdown nav-links">
