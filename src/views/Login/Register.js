@@ -23,7 +23,7 @@ function RegisterForm() {
         }
 
         // 检查密码强度，例如最小长度、包含数字和字母等
-        // 这里假设密码长度至少为8，且必须包含数字和字母
+        // 这里密码长度至少为8，且必须包含数字和字母
         const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
         if (!passwordRegex.test(password)) {
             alert('密码不符合要求。请确保密码长度至少为8个字符，并包含数字和字母。');

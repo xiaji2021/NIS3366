@@ -102,8 +102,6 @@ def login():
     if not check_password_hash(password_hash, password):
         return jsonify({'message': '用户名或密码错误'}), 401
 
-    # 如果需要，这里可以生成并返回一个登录令牌或创建一个会话
-    # 例如：token = generate_token(username)
 
     # 返回登录成功的响应
     return jsonify({'message': '登录成功'}), 200
