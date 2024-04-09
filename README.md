@@ -56,15 +56,15 @@ python3 backend.py
 
 ##### 文生图界面
 
-- ![image-20240407233339061](C:\Users\LiuScom\AppData\Roaming\Typora\typora-user-images\image-20240407233339061.png)
+- ![image-20240407233339061](./images/image-20240407233339061.png)
 
 ##### 实体抽取界面
 
-- ![image-20240407233407087](image-20240407233407087.png)
+- ![image-20240407233407087](./images/image-20240407233407087.png)
 
 ##### 水印检测与生成界面
 
-- ![image-20240407233437042](image-20240407233437042.png)
+- ![image-20240407233437042](./images/image-20240407233437042.png)
 
 #### 2. 功能实现测试
 
