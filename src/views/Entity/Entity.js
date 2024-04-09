@@ -50,7 +50,7 @@ const Entity = () => {
         formData.append('image', dataURLtoBlob(image));
 
         try {
-            const response =  await axios.post('http://47.103.101.128:8888/entity-gen',formData,{
+            const response =  await axios.post('http://39.107.60.129:8888/entity-gen',formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

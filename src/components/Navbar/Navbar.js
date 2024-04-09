@@ -44,7 +44,7 @@ function Navbar() {
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 {user ? (
                                     <>
-                                        <span className="dropdown-item-text">{user},你好！</span>
+                                        <span className="dropdown-item-text">{user.username},你好！</span>
                                         <button onClick={handleLogout} className="dropdown-item">
                                             登出
                                         </button>

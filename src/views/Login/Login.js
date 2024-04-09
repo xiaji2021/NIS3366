@@ -6,13 +6,13 @@ function LoginForm() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const {login} = useContext(AuthContext);
+    const {user,login} = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleLogin = async (event) => {
         event.preventDefault(); // 阻止表单默认提交行为
         try {
-            const response = await fetch('http://47.103.101.128:8888/api/login', { // 这里应该是你的登录 API URL
+            const response = await fetch('http://39.107.60.129:8888/api/login', { // 这里应该是你的登录 API URL
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ function LoginForm() {
             if (response.ok) {
                 const data = await response.json();
 
-                console.log('登录成功:', data);
+                console.log('登录成功');
                 login(username);
                 navigate('/'); // 导航至应用的主页
 

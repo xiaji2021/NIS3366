@@ -12,13 +12,13 @@ const useAuth = () => {
     return useContext(AuthContext);
 };
 
-const RequireAuth = ({ children }) => {
+const RequireAuth = () => {
     const auth = useAuth();
     if (!auth.user) {
         // 用户未登录，重定向至登录页面
         return <Navigate to="/login" />;
     }
-    return children; // 用户已登录，渲染对应的组件
+    return <Outlet />; // 用户已登录，渲染子路由对应的组件
 };
 
 function App() {
@@ -31,20 +31,22 @@ function App() {
     };
 
     return (
-        <AuthContext.Provider value={{ user, login, logout }}>
+<AuthContext.Provider value={{ user, login, logout }}>
             <Router>
                 <Navbar />
                 <Routes>
-
                     <Route path="/login" element={<LoginForm />} />
                     <Route path="/register" element={<RegisterForm />} />
-                    {/* 使用 RequireAuth 来包裹需要认证的组件 */}
+                    
+                    {/* 使用 RequireAuth 作为父路由 */}
                     <Route element={<RequireAuth />}>
+                        {/* 添加嵌套路由 */}
                         <Route path="/" element={<ImageGenerator />} />
                         <Route path="/watermark" element={<ImageUploader />} />
                         <Route path="/image-generator" element={<ImageGenerator />} />
                         <Route path="/entity" element={<Entity />} />
                     </Route>
+                    
                 </Routes>
             </Router>
         </AuthContext.Provider>

@@ -31,7 +31,7 @@ function RegisterForm() {
         }
 
         try {
-            const response = await fetch('http://47.103.101.128:8888/api/register', {
+            const response = await fetch('http://39.107.60.129:8888/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

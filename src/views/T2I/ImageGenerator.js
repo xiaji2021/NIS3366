@@ -21,7 +21,7 @@ function ImageGenerator() {
     const handleGenerateClick = async () => {
         try {
             setIsLoading(true);
-            const response = await axios.post('http://47.103.101.128:8888/generate-image', {
+            const response = await axios.post('http://39.107.60.129:8888/generate-image', {
               text,
               height,
               width,

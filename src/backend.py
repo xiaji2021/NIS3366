@@ -21,8 +21,9 @@ db_config = {
     'host': 'localhost',
     'dbname': 'nis3366',
     'user': 'nis3366',
-    'password': 'nieEEGG'
+    'password': 'nisEEGG'
 }
+
 def get_db_connection():
     conn = psycopg2.connect(**db_config)
     return conn
@@ -45,23 +46,7 @@ MAX_SEED = 2**32 -1
 app = Flask(__name__, static_folder='static')
 CORS(app)  # 启用 CORS
 
-users = {
-    "user1":"password_hash1"
-    "user2":"password_hash2"
 
-}
-
-@app.route('/api/login', methods=['POST'])
-def login():
-    data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
-    if username in users and check_password_hash(users[username], password):
-        # 登录成功，返回 token 或其他认证信息
-        return jsonify({'message': '登录成功', 'token': 'some_token'}), 200
-    else:
-        # 登录失败，返回错误信息
-        return jsonify({'error': '用户名或密码错误'}), 401
 
 
 @app.route('/api/register', methods=['POST'])
@@ -81,14 +66,14 @@ def register():
     password_hash = generate_password_hash(password)
 
     conn = get_db_connection()
-        cursor = conn.cursor()
-        cursor.execute(
-            'INSERT INTO users (username, password_hash, email) VALUES (%s, %s, %s)',
-            (username, password_hash, email)
-        )
-        conn.commit()
-        cursor.close()
-        conn.close()
+    cursor = conn.cursor()
+    cursor.execute(
+        'INSERT INTO users (username, password_hash, email) VALUES (%s, %s, %s)',
+        (username, password_hash, email)
+    )
+    conn.commit()
+    cursor.close()
+    conn.close()
 
     # 返回注册成功的响应
     return jsonify({'message': '注册成功'}), 201

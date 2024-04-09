@@ -45,7 +45,7 @@ const ImageUploader = () => {
     formData.append('text', text)
 
     try {
-        const response =  await axios.post('http://47.103.101.128:8888/watermark-gen',formData,{
+        const response =  await axios.post('http://39.107.60.129:8888/watermark-gen',formData,{
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -142,7 +142,7 @@ const ImageUploader = () => {
     
     // 模拟向后端发送请求并获取文本结果
         try {
-        const response =  await axios.post('http://47.103.101.128:8888/watermark-attack',formData,{
+        const response =  await axios.post('http://39.107.60.129:8888/watermark-attack',formData,{
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
