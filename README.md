@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# 文生图及其衍生图像处理工具
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 介绍
 
-## Available Scripts
+在数字内容的生成和保护领域，文生图模型和图片水印技术具有重要意义。本项目前端基于 react撰写用户界面及相应的应用板块，后端基于coco数据集预训练的AI模型 Diffusion 进行文生图推理，使用Qwen-VL-Chat 进行实体检测任务；基于 DCT 、 DWT 、四维分块等实现嵌入水印，基于 K-Means 算法实现提取水印。
 
-In the project directory, you can run:
+## 部署
 
-### `npm start`
+```bash
+git clone https://github.com/xiaji2021/NIS3366.git
+cd NIS3366
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 将水印生成模块添加到环境变量
+cd blind_watermark
+pip install .
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 安装diffusers
+pip install --upgrade diffusers[torch]
 
-### `npm test`
+# 安装GroundingDINO所需库
+cd ../GroundingDINO
+pip install -e .
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 安装Qwen-VL所需库
+cd ../Qwen-VL
+pip install -r requirements.txt
 
-### `npm run build`
+# 安装react所需依赖
+npm install axios
+npm install react-router-dom
+npm install -g serve
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+由于模型参数过大，用户需要在huggingface自行下载runwayml/stable-diffusion-v1-5(https://huggingface.co/runwayml/stable-diffusion-v1-5 )，Qwen-VL-Chat(https://huggingface.co/Qwen/Qwen-VL-Chat)，groundingdino_swint_ogc.pth(https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/groundingdino_swinb_cogcoor.pth)至model文件夹中。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 如何使用
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+进入NIS3366主目录，运行：
 
-### `npm run eject`
+```bash
+npm run build
+serve -s build -l <port>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+进入src目录，运行：
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+python3 backend.py
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 效果
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 1.功能界面实现测试
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### 文生图界面
 
-### Code Splitting
+- ![image-20240407233339061](C:\Users\LiuScom\AppData\Roaming\Typora\typora-user-images\image-20240407233339061.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##### 实体抽取界面
 
-### Analyzing the Bundle Size
+- ![image-20240407233407087](image-20240407233407087.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##### 水印检测与生成界面
 
-### Making a Progressive Web App
+- ![image-20240407233437042](image-20240407233437042.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 2. 功能实现测试
 
-### Advanced Configuration
+##### 文生图功能测试
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- ![image-20240407233530165](./images/image-20240407233530165.png)
 
-### Deployment
+##### 水印生成与检测模块
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **水印生成**
+    - ![image-20240407233722519](./images/image-20240407233722519.png)
+- **水印检测**
+    - ![image-20240407233743926](./images/image-20240407233743926.png)
 
-### `npm run build` fails to minify
+- **遮蔽攻击检测**
+    - ![image-20240407233956527](./images/image-20240407233956527.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **旋转攻击检测**
+    - ![image-20240407234119351](./images/image-20240407234119351.png)
+
+##### 实体检测功能测试
+
+- ![image-20240407234406696](image-20240407234406696.png)
+
+## 如何训练
+
+```shell
+python mycode/generate_images_by_diffusers_train.py
+python mycode/generate_images_by_groundingdino_train.py
+sh mycode/finetune_lora_single_gpu.sh
+```
+
+注：Qwen-VL的训练需要的显存及训练速度如下，也可使用Qwen-VL-Chat的基础版本。
+
+| Method      | Sequence Length | Sequence Length | Sequence Length | Sequence Length |
+| ----------- | --------------- | --------------- | --------------- | --------------- |
+| Method      | 384             | 512             | 1024            | 2048            |
+| LoRA (Base) | 37.1G / 2.3s/it | 37.3G / 2.4s/it | 38.7G / 3.6s/it | 38.7G / 6.1s/it |
+| LoRA (Chat) | 23.3G / 2.2s/it | 23.6G / 2.3s/it | 25.1G / 3.5s/it | 27.3G / 5.9s/it |
+| Q-LoRA      | 17.0G / 4.2s/it | 17.2G / 4.5s/it | 18.2G / 5.5s/it | 19.3G / 7.9s/it |
